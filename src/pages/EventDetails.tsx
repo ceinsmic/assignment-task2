@@ -184,15 +184,15 @@ export default function EventDetails({navigation,route}: StackScreenProps<any>)
                         </View>
                         <View>
                             {canvolunteer && (
-                                <BigButton label="Volunteer" onPress={() => {}} color="orange" featherIconName="user-plus"/>
+                                <BigButton label="Volunteer" onPress={() => {volunteer()}} color="orange" featherIconName="user-plus"/>
                             )}
                             {share && (
-                                <BigButton label="Share" onPress={() => {}} color="blue" featherIconName="share-2"/>
+                                <BigButton label="Share" onPress={() => {shareEvent()}} color="blue" featherIconName="share-2"/>
                             )}
                             {volunteered && (
                                 <>
-                                    <BigButton label="Text Organizer" onPress={() => {handletext }} color="green" featherIconName="mail"/>
-                                    <BigButton label = "Call Organizer" onPress={() => {handlecall }} color="green" featherIconName="phone"/>
+                                    <BigButton label="Text Organizer" onPress={() => {handletext() }} color="green" featherIconName="mail"/>
+                                    <BigButton label = "Call Organizer" onPress={() => {handlecall() }} color="green" featherIconName="phone"/>
                                 </>
                             )}
                         </View>
